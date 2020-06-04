@@ -1,0 +1,101 @@
+.dice-pool-container
+{
+    position: relative;
+}
+.dice-pool-container .label
+{
+    height: 25px;
+    padding: 0;
+    overflow: hidden;
+}
+.dice-pool-container .label.vertical
+{
+    width: 50px;
+}
+.dice-pool-container .results
+{
+    position: relative;
+    float: left;
+    z-index: 1;
+    border-collapse: collapse;
+}
+.dice-pool-container table.results td, .dice-pool-container table.results th
+{
+    border: 1px #ccc solid;
+    padding: 0.5em;
+    text-align: center;    
+    background-color: White;
+}
+.dice-pool-container table.results td.no-border
+{
+    border: none;
+    padding: 0;
+    background-color: transparent;
+}
+.dice-pool-container .controls
+{
+    float: left;
+    border: 1px #ccc solid;
+    position: relative;
+    z-index: 0;
+    padding-right: 18px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+.dice-pool-container .controls td
+{
+    overflow: hidden;
+    white-space: nowrap;
+}
+.dice-pool-container .controls .toggle
+{
+    position: absolute;
+    right: 0px;
+    top: 0;
+    bottom: 0;
+    width: 18px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(240, 240, 240);
+    border-left: 1px solid #ccc;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.dice-pool-container .controls .toggle img
+{
+    position: absolute;
+    top: 50%;
+    margin: -10px 0 0 0;
+    left: 2px;
+    border: none;
+    padding: 0;
+    -webkit-box-shadow: none;
+    -goog-ms-box-shadow: none;
+    box-shadow: none;
+    background-color: transparent;
+}
+.dice-pool-container .controls .toggle:hover
+{
+    background-color: rgb(230, 230, 255);
+}
+.dice-pool-container .controls input
+{
+    width: 3em;     
+}
+.dice-pool-container .information
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(64, 64, 64, 0.75);
+}
+.dice-pool-container .information .contents
+{    
+    text-align: center;
+    width: auto;
+    background-color: White;
+    border: 1px solid #ccc;
+}
