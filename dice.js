@@ -9,7 +9,7 @@ function DicePoolTable(container, options)
     this.minTarget = 1;
     this.maxTarget = getOptionOrDefault(options, "targetSuccessCount", 6);
     this.decimalPlaces = getOptionOrDefault(options, "decimalPlaces", 2);
-    this.version = 1.02;
+    this.version = 1.03;
     
     this.container = $(container).addClass("dice-pool-container");    
     this.render();
@@ -104,12 +104,14 @@ DicePoolTable.prototype.showInformation = function()
     var contents = $("<div></div>")
         .addClass("contents")
         .append($("<p></p>")
-            .append("About ")
-            .append($("<a></a>").text("DicePoolTable").attr("href", "http://weaving-stories.blogspot.co.uk/2013/05/dice-pools-probabilities.html")))
+            .append($("<a></a>").text("About this app").attr("href", "http://weaving-stories.blogspot.co.uk/2013/05/dice-pools-probabilities.html"))
+            .append(" | ")
+            .append($("<a></a>").text("Source code").attr("href", "https://github.com/MartinEden/dicepools/"))
+        )
         .append($("<p></p>").text("Version: " + this.version))
         .append($("<p></p>")
             .append("Released under ")
-            .append($("<a></a>").text("this licence").attr("href", "http://geekroom.co.uk/projects/dicepool/license.txt"))
+            .append($("<a></a>").text("this licence").attr("href", "https://dice-pools.surge.sh/license.txt"))
             .append("."))
         .append($("<p></p>")
             .append($("<a></a>").text("Close").attr("href", "#").click(function() {
@@ -186,7 +188,7 @@ DicePoolTable.prototype._makeToggleButton = function()
     return $("<div></div>")
         .addClass("toggle")
         .click(function() { me.toggleControls() })
-        .append($("<img />").attr("src", "./gear.png"));
+        .append($("<img />").attr("src", "https://dice-pools.surge.sh/gear.png"));
 }
 DicePoolTable.prototype._makeControl = function(label, value, callback)
 {
